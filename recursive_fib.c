@@ -1,17 +1,20 @@
 #include<stdio.h>
-#include<conio.h>
+//#include<conio.h>
 
-int fib(n){
-	if(n==1){
+int fib(int n){
+	if(n == 0){
+	return 0;
+	}
+	else if(n == 1){
 	return 1;
 	}
 	else{
-	return (fib(n-1)+fib(n-2);
+	return fib(n-1)+fib(n-2);
 	}
 }
 
-int main(){
-	int a=fib(5);
+int main(int argc, char* argv){
+	int n = argv[1];
+	int a = fib(n);
 	printf("%d",a);
-	getch();
 }
